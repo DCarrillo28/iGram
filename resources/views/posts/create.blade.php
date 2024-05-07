@@ -4,8 +4,6 @@
     Crear una nueva publicación
 @endsection
 
-<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css"/>
-
 @push('styles')
     <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 @endpush
@@ -53,5 +51,5 @@
             </form>
         </div>
     </div>
-
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css"/>
 @endsection
