@@ -21,7 +21,7 @@ class PostController extends Controller
 
         //$posts = Post::where('user_id', $user->id)->get();
         //$posts = Post::where('user_id', $user->id)->latest()->paginate(8);
-        $posts = Post::where('user_id', $user->id)->latest()->simplePaginate(8);
+        $posts = Post::where('user_id', $user->id)->latest()->simplePaginate(10);
         //dd($posts);
         return view('dashboard', [
             'user' => $user,

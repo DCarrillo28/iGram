@@ -21,7 +21,9 @@
                         name="username"
                         placeholder="Tu Nombre de Usuario"
                         class="borde p-3 w-full rounded-lg @error('username') border-red-500 @enderror"
-                        value="{{auth()->user()->username}}">
+                        value="{{auth()->user()->username}}"
+                    />
+
                     @error('username')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center"> {{ $message }} </p>
                     @enderror
@@ -37,12 +39,13 @@
                         name="imagen"
                         class="borde p-3 w-full rounded-lg
                         value=""
-                        accept=".jpg, .jpeg, .png"/>
+                        accept=".jpg, .jpeg, .png"
+                    />
                 </div>
                 <input
                     type="submit"
                     name="submit"
-                    alue="Guardar Cambios"
+                    value="Guardar Cambios"
                     class="bg-sky-600 hover:bg-sky-700 transitions-colors cursor-pointer uppercase font-bold w-full
                     p-3 text-white rounded-lg mt-5">
             </form>

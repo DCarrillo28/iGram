@@ -37,14 +37,16 @@ class PerfilController extends Controller
 
             $imagenServidor=Image::make($imagen);
             $imagenServidor->fit(1000,1000);
+
             $imagenPath=public_path('perfiles') . '/' . $nombreImagen;
             $imagenServidor->save($imagenPath);
         }
 
         //Guardar Cambios
         $usuario = User::find(auth()->user()->id);
+
         $usuario->username = $request->username;
-        $usuario->imagen = $nombreImagen ?? auth()->user() ?? null;
+        $usuario->imagen = $nombreImagen ?? auth()->user()->imagen ?? null;
         $usuario->save();
 
         //Redireccionar al usuario.
